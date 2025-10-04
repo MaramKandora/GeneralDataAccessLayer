@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|e:\\githupreprositries\\generaldataaccesslayer\\clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|solutionrelative:clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsGeneralDataAccessLayer.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
+              "RelativeDocumentMoniker": "clsGeneralDataAccessLayer.cs",
+              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
+              "RelativeToolTip": "clsGeneralDataAccessLayer.cs",
+              "ViewState": "AgIAAGIBAAAAAAAAAAAiwGwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T08:14:09.685Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
