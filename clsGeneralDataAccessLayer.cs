@@ -261,26 +261,26 @@ namespace GeneralDataAccessLayer
             return (AffectedRows > 0);
         }
 
-        public bool AddNewRecord()
+        public int AddNewRecord()
         {
             //first you should Fill Fields with Values of New Record
 
             Fields[_IDColumnName] = -1;
-            bool isSucceeded = false;
-        
+
+
             SqlConnection connection = new SqlConnection(_ConnectionString);
 
             string Query = $"Insert into {_TableName} Values (";
 
-            foreach(var  pair in Fields)
+            foreach (var pair in Fields)
             {
                 if (pair.Key == _IDColumnName)
                     continue;
 
-                if (pair.Value != null && pair.Value.ToString() == "-1") 
+                if (pair.Value != null && pair.Value.ToString() == "-1")
                 {
                     //There is an empty Field
-                    return false;
+                    return -1;
                 }
 
 
@@ -295,7 +295,7 @@ namespace GeneralDataAccessLayer
 
             SqlCommand Command = new SqlCommand(Query, connection);
 
-            foreach(var pair in Fields)
+            foreach (var pair in Fields)
             {
                 if (pair.Value != null)
                 {
@@ -312,23 +312,23 @@ namespace GeneralDataAccessLayer
                 connection.Open();
                 object result = Command.ExecuteScalar();
 
-                if (result != null && int.TryParse(result.ToString(), out int InsertedID)) 
+                if (result != null && int.TryParse(result.ToString(), out int InsertedID))
                 {
                     Fields[_IDColumnName] = InsertedID;
                 }
 
-                isSucceeded = true;
+
             }
             catch
             {
-                isSucceeded = false;
+               
             }
             finally
             {
                 connection.Close();
             }
 
-            return isSucceeded;   
+            return (int)Fields[_IDColumnName];
         }
 
 
