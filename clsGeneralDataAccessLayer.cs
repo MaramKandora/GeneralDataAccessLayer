@@ -10,12 +10,13 @@ namespace GeneralDataAccessLayer
     public class clsGeneralDataAccessLayer
     {
 
-        string _TableName {  get; }    
-        string _IDColumnName { get; }  
-        string _ConnectionString {  get; }
+       public string _TableName {  get; }    
+       public string _IDColumnName { get; }  
+       public string _ConnectionString {  get; }
         
-        //Fields Keys will be stored in small Letters
-       public Dictionary<string, object> Fields { get; set; }
+        //Columns Names 'Keys' will be stored in small Letters
+        //ititial values of empty Record = -1
+       public Dictionary<string, object> ColumnsNames_Record { get; set; }
 
      
        public clsGeneralDataAccessLayer(string ConnectionString, string TableName, string IDColumnName)
@@ -24,8 +25,8 @@ namespace GeneralDataAccessLayer
             _IDColumnName = IDColumnName.ToLower();   
             _ConnectionString = ConnectionString;   
 
-            //ititial values of empty fields is -1
-            UploadFields();
+           
+            GetColumnsNames();
            
         }
 
@@ -36,7 +37,6 @@ namespace GeneralDataAccessLayer
 
             SqlConnection Connection = new SqlConnection(_ConnectionString);
 
-            //Get names of fields
             string Query = "Select * from " + _TableName +";";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
@@ -64,18 +64,18 @@ namespace GeneralDataAccessLayer
             return ID;  
         }
 
-        bool UploadFields()
+        bool GetColumnsNames()
         {
             SqlConnection Connection = new SqlConnection(_ConnectionString);
 
-            //Get names of fields
+            
             int ID = GetAnActualIdFromTable();
 
             if (ID == -1) 
             {
                 return false;
             }
-
+            
             string Query = $"Select * from {_TableName} Where {_IDColumnName} = {ID};";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
@@ -87,11 +87,11 @@ namespace GeneralDataAccessLayer
 
                 if (Reader.Read())
                 {
-                    Fields = new Dictionary<string, object>(Reader.FieldCount);
+                    ColumnsNames_Record = new Dictionary<string, object>(Reader.FieldCount);
 
                     for (int i = 0; i < Reader.FieldCount; i++)
                     {
-                        Fields.Add(Reader.GetName(i).ToLower(), -1);
+                        ColumnsNames_Record.Add(Reader.GetName(i).ToLower(), -1);
                     }
                 }
                 Reader.Close(); 
@@ -110,13 +110,14 @@ namespace GeneralDataAccessLayer
         }
 
             
-         public Dictionary<string, object> FindRecordByID(int RecordID)
+         public bool FindRecordByID(int RecordID)
         {
-            
 
-            Dictionary<string, object> RecordValues = new Dictionary<string, object>();
+           //Found Record will be stored in 'ColumnsNames_Record' field
 
             SqlConnection Connection = new SqlConnection(_ConnectionString);
+
+            bool isRecordFound = false;
 
             string Query = "Select * from " + _TableName + " where " + _IDColumnName + " = @Id";
 
@@ -133,8 +134,10 @@ namespace GeneralDataAccessLayer
                 {
                     for (int i = 0; i < Reader.FieldCount; i++)
                     {
-                        RecordValues[Reader.GetName(i)] = Reader[i];
+                        ColumnsNames_Record[Reader.GetName(i).ToLower()] = Reader[i];
                     }
+
+                    isRecordFound = true;   
 
                 }
                 Reader.Close();
@@ -149,7 +152,7 @@ namespace GeneralDataAccessLayer
                 Connection.Close();
             }
 
-            return RecordValues;
+            return isRecordFound;
 
         }
 
@@ -184,24 +187,24 @@ namespace GeneralDataAccessLayer
 
         public bool UpdateRecord(int RecordID)
         {
-           //first you should fill Fields with values to update
+           //first you should fill 'ColumnsNames_Record' with values to update
             int AffectedRows = 0;
 
             SqlConnection Connection = new SqlConnection(_ConnectionString);
 
-            Fields[_IDColumnName] = RecordID;
+            ColumnsNames_Record[_IDColumnName] = RecordID;
 
             string Query = $"UPDATE {_TableName} SET ";
 
             bool isThereFieldToUpdate = false;
 
-            foreach(var pair in Fields)
+            foreach(var pair in ColumnsNames_Record)
             {
-                //if value is set as -1 , means field is empty so skip updating it
+                //if a value is set as -1 , means it`s empty so skip updating Column of this value
                 if ((pair.Key == _IDColumnName) || (pair.Value.ToString() == "-1")) 
                     continue;
                 
-                if (pair.Key != Fields.Last().Key)
+                if (pair.Key != ColumnsNames_Record.Last().Key)
                 {
                     isThereFieldToUpdate = true;
                     Query += $"{pair.Key} = @{pair.Key} ,";
@@ -223,7 +226,7 @@ namespace GeneralDataAccessLayer
             SqlCommand Command = new SqlCommand(Query,Connection);
 
             
-            foreach(var pair in Fields)
+            foreach(var pair in ColumnsNames_Record)
             {
                 if(pair.Value.ToString()=="-1")
                     continue;
@@ -263,28 +266,28 @@ namespace GeneralDataAccessLayer
 
         public int AddNewRecord()
         {
-            //first you should Fill Fields with Values of New Record
+            //first you should Fill 'ColumnsNames_Record' with Values of New Record
 
-            Fields[_IDColumnName] = -1;
+            ColumnsNames_Record[_IDColumnName] = -1;
 
 
             SqlConnection connection = new SqlConnection(_ConnectionString);
 
             string Query = $"Insert into {_TableName} Values (";
 
-            foreach (var pair in Fields)
+            foreach (var pair in ColumnsNames_Record)
             {
                 if (pair.Key == _IDColumnName)
                     continue;
 
                 if (pair.Value != null && pair.Value.ToString() == "-1")
                 {
-                    //There is an empty Field
+                    //There is an empty value of record
                     return -1;
                 }
 
 
-                if (pair.Key != Fields.Last().Key)
+                if (pair.Key != ColumnsNames_Record.Last().Key)
                     Query += $"@{pair.Key} ,";
                 else
                     Query += $"@{pair.Key}) ;";
@@ -295,7 +298,7 @@ namespace GeneralDataAccessLayer
 
             SqlCommand Command = new SqlCommand(Query, connection);
 
-            foreach (var pair in Fields)
+            foreach (var pair in ColumnsNames_Record)
             {
                 if (pair.Value != null)
                 {
@@ -314,7 +317,7 @@ namespace GeneralDataAccessLayer
 
                 if (result != null && int.TryParse(result.ToString(), out int InsertedID))
                 {
-                    Fields[_IDColumnName] = InsertedID;
+                    ColumnsNames_Record[_IDColumnName] = InsertedID;
                 }
 
 
@@ -328,7 +331,7 @@ namespace GeneralDataAccessLayer
                 connection.Close();
             }
 
-            return (int)Fields[_IDColumnName];
+            return (int)ColumnsNames_Record[_IDColumnName];
         }
 
 

@@ -4,3 +4,9 @@ E:\C #\DataAccessGeneral\bin\Debug\DataAccessGeneral.dll
 E:\C #\DataAccessGeneral\bin\Debug\DataAccessGeneral.pdb
 E:\C #\DataAccessGeneral\obj\Debug\DataAccessGeneral.dll
 E:\C #\DataAccessGeneral\obj\Debug\DataAccessGeneral.pdb
+E:\GitHupReprositries\GeneralDataAccessLayer\bin\Debug\DataAccessGeneral.dll
+E:\GitHupReprositries\GeneralDataAccessLayer\bin\Debug\DataAccessGeneral.pdb
+E:\GitHupReprositries\GeneralDataAccessLayer\obj\Debug\DataAccessGeneral.csproj.AssemblyReference.cache
+E:\GitHupReprositries\GeneralDataAccessLayer\obj\Debug\DataAccessGeneral.csproj.CoreCompileInputs.cache
+E:\GitHupReprositries\GeneralDataAccessLayer\obj\Debug\DataAccessGeneral.dll
+E:\GitHupReprositries\GeneralDataAccessLayer\obj\Debug\DataAccessGeneral.pdb
