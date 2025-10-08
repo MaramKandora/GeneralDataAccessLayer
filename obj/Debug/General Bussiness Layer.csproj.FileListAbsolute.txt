@@ -1,0 +1,9 @@
+E:\GitHupReprositries\General Bussiness Layer\bin\Debug\General Bussiness Layer.dll
+E:\GitHupReprositries\General Bussiness Layer\bin\Debug\General Bussiness Layer.pdb
+E:\GitHupReprositries\General Bussiness Layer\bin\Debug\DataAccessGeneral.dll
+E:\GitHupReprositries\General Bussiness Layer\bin\Debug\DataAccessGeneral.pdb
+E:\GitHupReprositries\General Bussiness Layer\obj\Debug\General Bussiness Layer.csproj.AssemblyReference.cache
+E:\GitHupReprositries\General Bussiness Layer\obj\Debug\General Bussiness Layer.csproj.CoreCompileInputs.cache
+E:\GitHupReprositries\General Bussiness Layer\obj\Debug\General .77CDA0AB.Up2Date
+E:\GitHupReprositries\General Bussiness Layer\obj\Debug\General Bussiness Layer.dll
+E:\GitHupReprositries\General Bussiness Layer\obj\Debug\General Bussiness Layer.pdb

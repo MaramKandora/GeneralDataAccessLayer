@@ -3,11 +3,12 @@
   "WorkspaceRootPath": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|..\\General Bussiness Layer\\General Bussiness Layer.csproj|e:\\githupreprositries\\general bussiness layer\\clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|solutionrelative:clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|e:\\githupreprositries\\generaldataaccesslayer\\clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|solutionrelative:clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|General Bussiness Layer.csproj|e:\\githupreprositries\\generaldataaccesslayer\\clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|General Bussiness Layer.csproj|solutionrelative:clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "clsGeneralDataAccessLayer.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
-              "RelativeDocumentMoniker": "clsGeneralDataAccessLayer.cs",
-              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
-              "RelativeToolTip": "clsGeneralDataAccessLayer.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAmwMcAAAAAAAAAAAAAAA==",
+              "Title": "clsGeneralBusinessLayer.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralBusinessLayer.cs",
+              "RelativeDocumentMoniker": "clsGeneralBusinessLayer.cs",
+              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralBusinessLayer.cs",
+              "RelativeToolTip": "clsGeneralBusinessLayer.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T22:42:35.644Z",
+              "WhenOpened": "2025-10-08T12:20:59.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clsGeneralBusinessLayer.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\General Bussiness Layer\\clsGeneralBusinessLayer.cs",
-              "RelativeDocumentMoniker": "..\\General Bussiness Layer\\clsGeneralBusinessLayer.cs",
-              "ToolTip": "E:\\GitHupReprositries\\General Bussiness Layer\\clsGeneralBusinessLayer.cs",
-              "RelativeToolTip": "..\\General Bussiness Layer\\clsGeneralBusinessLayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Title": "clsGeneralDataAccessLayer.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
+              "RelativeDocumentMoniker": "clsGeneralDataAccessLayer.cs",
+              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
+              "RelativeToolTip": "clsGeneralDataAccessLayer.cs",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAiwF8BAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T09:43:59.34Z",
+              "WhenOpened": "2025-10-07T22:42:35.644Z",
               "EditorCaption": ""
             }
           ]
