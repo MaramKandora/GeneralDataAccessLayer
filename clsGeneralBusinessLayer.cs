@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using GeneralDataAccessLayer;
 
-namespace General_Business_Layer
+namespace GeneralBusinessLayer
 {
     public class clsGeneralBusinessLayer
     {
         clsGeneralDataAccessLayer DataAccessObject;
+
+        //Columns Names 'Keys' will be stored in small Letters
+        //ititial values of empty Record = -1
         public Dictionary<string, object> ColumnsNames_Record { get; set; }
         enum enMode { AddNew,Update}
         enMode _Mode;
