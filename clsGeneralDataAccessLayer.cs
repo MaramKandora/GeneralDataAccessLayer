@@ -185,9 +185,13 @@ namespace GeneralDataAccessLayer
             return Result != null ; 
         }
 
+        ///<remarks>
+        /// First you should Fill 'ColumnsNames_Record' field with New values To Update.
+        /// <para> '-1' value of a column will skip updating this column </para>
+        /// </remarks>
+        /// <returns>true if update was successful, otherwise false.</returns>
         public bool UpdateRecord(int RecordID)
         {
-           //first you should fill 'ColumnsNames_Record' with values to update
             int AffectedRows = 0;
 
             SqlConnection Connection = new SqlConnection(_ConnectionString);
@@ -201,7 +205,7 @@ namespace GeneralDataAccessLayer
             foreach(var pair in ColumnsNames_Record)
             {
                 //if a value is set as -1 , means it`s empty so skip updating Column of this value
-                if ((pair.Key == _IDColumnName) || (pair.Value.ToString() == "-1")) 
+                if ((pair.Key == _IDColumnName) || (pair.Value != null && pair.Value.ToString() == "-1")) 
                     continue;
                 
                 if (pair.Key != ColumnsNames_Record.Last().Key)
@@ -228,7 +232,7 @@ namespace GeneralDataAccessLayer
             
             foreach(var pair in ColumnsNames_Record)
             {
-                if(pair.Value.ToString()=="-1")
+                if(pair.Value != null && pair.Value.ToString() == "-1")
                     continue;
 
                 if (pair.Value != null)
@@ -264,9 +268,13 @@ namespace GeneralDataAccessLayer
             return (AffectedRows > 0);
         }
 
+        ///<remarks>
+        /// First you should Fill 'ColumnsNames_Record' field with values To Add New.
+        /// <para> Skip Adding a value will throw an exception. </para>
+        /// </remarks>
+        /// <returns>true if Adding was successful, otherwise false.</returns>
         public int AddNewRecord()
         {
-            //first you should Fill 'ColumnsNames_Record' with Values of New Record
 
             ColumnsNames_Record[_IDColumnName] = -1;
 

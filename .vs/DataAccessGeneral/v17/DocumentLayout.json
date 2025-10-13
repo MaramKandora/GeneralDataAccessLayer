@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\",
+  "WorkspaceRootPath": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|General Bussiness Layer.csproj|E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|General Bussiness Layer.csproj|solutionrelative:clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|GeneralDataAccessLayer.csproj|e:\\githupreprositries\\generaldataaccessandbusinesslayers\\clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|GeneralDataAccessLayer.csproj|solutionrelative:clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|e:\\githupreprositries\\generaldataaccesslayer\\clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{809E7680-59AB-4EA7-B2F6-58FF4838858F}|DataAccessGeneral.csproj|solutionrelative:clsgeneraldataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|GeneralBusinessLayer.csproj|e:\\githupreprositries\\generaldataaccessandbusinesslayers\\clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251448CF-AC32-44E3-8463-A10D7FB91460}|GeneralBusinessLayer.csproj|solutionrelative:clsgeneralbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "clsGeneralDataAccessLayer.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsGeneralDataAccessLayer.cs",
+              "RelativeDocumentMoniker": "clsGeneralDataAccessLayer.cs",
+              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsGeneralDataAccessLayer.cs",
+              "RelativeToolTip": "clsGeneralDataAccessLayer.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAUwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T19:14:22.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "clsGeneralBusinessLayer.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralBusinessLayer.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsGeneralBusinessLayer.cs",
               "RelativeDocumentMoniker": "clsGeneralBusinessLayer.cs",
-              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralBusinessLayer.cs",
+              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsGeneralBusinessLayer.cs",
               "RelativeToolTip": "clsGeneralBusinessLayer.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAwwDwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T12:20:59.424Z",
               "EditorCaption": ""
@@ -37,14 +54,13 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "clsGeneralDataAccessLayer.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsGeneralDataAccessLayer.cs",
               "RelativeDocumentMoniker": "clsGeneralDataAccessLayer.cs",
-              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessLayer\\clsGeneralDataAccessLayer.cs",
+              "ToolTip": "E:\\GitHupReprositries\\GeneralDataAccessAndBusinessLayers\\clsGeneralDataAccessLayer.cs",
               "RelativeToolTip": "clsGeneralDataAccessLayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T22:42:35.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T22:42:35.644Z"
             }
           ]
         }
