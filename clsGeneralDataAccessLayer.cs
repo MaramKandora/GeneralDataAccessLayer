@@ -207,13 +207,17 @@ namespace GeneralDataAccessLayer
                 //if a value is set as -1 , means it`s empty so skip updating Column of this value
                 if ((pair.Key == _IDColumnName) || (pair.Value != null && pair.Value.ToString() == "-1")) 
                     continue;
+
+                Query += $"{pair.Key} = @{pair.Key} ,";
+                isThereFieldToUpdate = true;
                 
-                if (pair.Key != ColumnsNames_Record.Last().Key)
-                {
-                    isThereFieldToUpdate = true;
-                    Query += $"{pair.Key} = @{pair.Key} ,";
-                }
+                
                
+            }
+
+            if (isThereFieldToUpdate == false) 
+            {
+                return false;
             }
 
             //get rid of the last comma
@@ -222,10 +226,7 @@ namespace GeneralDataAccessLayer
 
             Query += $" Where {_IDColumnName} = @{_IDColumnName};";
 
-            if (isThereFieldToUpdate == false) 
-            {
-                return false;
-            }
+           
 
             SqlCommand Command = new SqlCommand(Query,Connection);
 
